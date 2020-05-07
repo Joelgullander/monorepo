@@ -1,0 +1,104 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { withKnobs, text, boolean, number } from "@storybook/addon-knobs";
+import { action } from '@storybook/addon-actions';
+
+import { RTE } from './RTE';
+
+<Meta title='Components|RTE' component={RTE} decorators={[withKnobs]} />
+
+# RTE
+
+## This component will handle any supported richtext tags and convert to components. If it doesn't match, normal HTML will be rendered.
+
+### Example of a nested richtext
+
+<Preview>
+    <Story name="Full richtext recursive">
+        <RTE html={`
+            <h1>This h1</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper dolor fringilla, cursus orci nec, pharetra ex. Vivamus nec arcu vitae est commodo ultricies placerat eu felis. Mauris porttitor ultricies mollis. Cras placerat vulputate mi, nec tristique neque. Nam cursus vitae dolor bibendum accumsan. Sed vitae lacinia leo. Pellentesque id aliquet augue. Morbi eu sem ac turpis tristique blandit ut eget ipsum. Cras accumsan consectetur neque, at fringilla odio aliquam nec.
+            </p>
+            <h2>This h2</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper dolor fringilla, cursus orci nec, pharetra ex. Vivamus nec arcu vitae est commodo ultricies placerat eu felis. Mauris porttitor ultricies mollis. Cras placerat vulputate mi, nec tristique neque. Nam cursus vitae dolor bibendum accumsan. Sed vitae lacinia leo. Pellentesque id aliquet augue. Morbi eu sem ac turpis tristique blandit ut eget ipsum. Cras accumsan consectetur neque, at fringilla odio aliquam nec.
+            </p>
+            <h3>This h3</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper dolor fringilla, cursus orci nec, pharetra ex. Vivamus nec arcu vitae est commodo ultricies placerat eu felis. Mauris porttitor ultricies mollis. Cras placerat vulputate mi, nec tristique neque. Nam cursus vitae dolor bibendum accumsan. Sed vitae lacinia leo. Pellentesque id aliquet augue. Morbi eu sem ac turpis tristique blandit ut eget ipsum. Cras accumsan consectetur neque, at fringilla odio aliquam nec.
+            </p>
+            <h4>This h4</h4>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper dolor fringilla, cursus orci nec, pharetra ex. Vivamus nec arcu vitae est commodo ultricies placerat eu felis. Mauris porttitor ultricies mollis. Cras placerat vulputate mi, nec tristique neque. Nam cursus vitae dolor bibendum accumsan. Sed vitae lacinia leo. Pellentesque id aliquet augue. Morbi eu sem ac turpis tristique blandit ut eget ipsum. Cras accumsan consectetur neque, at fringilla odio aliquam nec.
+            </p>
+            <h5>This h5</h5>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper dolor fringilla, cursus orci nec, pharetra ex. Vivamus nec arcu vitae est commodo ultricies placerat eu felis. Mauris porttitor ultricies mollis. Cras placerat vulputate mi, nec tristique neque. Nam cursus vitae dolor bibendum accumsan. Sed vitae lacinia leo. Pellentesque id aliquet augue. Morbi eu sem ac turpis tristique blandit ut eget ipsum. Cras accumsan consectetur neque, at fringilla odio aliquam nec.
+            </p>
+            <ul>
+                <li>List item 1</li>
+                <li>List item 2</li>
+                <li>List item 3</li>
+            </ul>
+        `} />
+    </Story>
+</Preview>
+
+### Parapraph
+<Preview>
+    <Story name="Paragraph">
+        <RTE html={"<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper dolor fringilla, cursus orci nec, pharetra ex. Vivamus nec arcu vitae est commodo ultricies placerat eu felis. Mauris porttitor ultricies mollis. Cras placerat vulputate mi, nec tristique neque. Nam cursus vitae dolor bibendum accumsan. Sed vitae lacinia leo. Pellentesque id aliquet augue. Morbi eu sem ac turpis tristique blandit ut eget ipsum. Cras accumsan consectetur neque, at fringilla odio aliquam nec.  </p>"} />
+    </Story>
+</Preview>
+
+### H1
+<Preview>
+    <Story name="H1">
+        <RTE html={"<h1> H1 </h1>"} />
+    </Story>
+</Preview>
+
+### H2
+<Preview>
+    <Story name="H2">
+        <RTE html={"<h2> H2 </h2>"} />
+    </Story>
+</Preview>
+
+### H3
+<Preview>
+    <Story name="H3">
+        <RTE html={"<h3> H3 </h3>"} />
+    </Story>
+</Preview>
+
+### H4
+<Preview>
+    <Story name="H4">
+        <RTE html={"<h4> H4 </h4>"} />
+    </Story>
+</Preview>
+
+### H5
+<Preview>
+    <Story name="H5">
+        <RTE html={"<h5> H5 </h5>"} />
+    </Story>
+</Preview>
+
+### Linked list
+<Preview>
+    <Story name="Linked list">
+        <RTE html={`
+            <ul>
+                <li>List item 1</li>
+                <li>List item 2</li>
+                <li>List item 3</li>
+            </ul>
+        `} />
+    </Story>
+</Preview>
+
+## Props
+
+<Props of={RTE} />

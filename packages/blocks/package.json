@@ -1,0 +1,32 @@
+{
+  "name": "@hiab/blocks",
+  "version": "0.0.23",
+  "description": "",
+  "main": "build/index.js",
+  "module": "build/index.es.js",
+  "files": [
+    "build"
+  ],
+  "author": "dynamicdog.se",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf ./build",
+    "prebuild": "yarn clean",
+    "build": "rollup -c",
+    "start": "webpack-dev-server --mode development --progress --open",
+    "prepack": "yarn build"
+  },
+  "gitHead": "151eb950102557dc189279916e0da2024eb7da40",
+  "dependencies": {
+    "@hiab/buttons": "^0.1.14",
+    "@hiab/image": "^0.0.14",
+    "@hiab/inputs": "^0.1.13",
+    "@hiab/theme": "^0.1.11"
+  },
+  "peerDependencies": {
+    "react": ">=16",
+    "react-dom": ">=16",
+    "styled-bootstrap-grid": "^3.1.0",
+    "styled-components": "^5.1.0"
+  }
+}

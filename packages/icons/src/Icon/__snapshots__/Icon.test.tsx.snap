@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Icon /> snapshot 1`] = `
+<IconsWrapper
+  color="#000"
+  height="25px"
+  name="plus"
+  width="25px"
+/>
+`;

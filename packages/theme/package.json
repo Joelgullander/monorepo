@@ -1,0 +1,29 @@
+{
+  "name": "@hiab/theme",
+  "version": "0.1.11",
+  "description": "",
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "types": "esm/index.d.ts",
+  "author": "dynamicdog.se",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf ./esm && rimraf ./cjs",
+    "prebuild": "yarn clean",
+    "build": "yarn build:esm && yarn build:cjs",
+    "build:esm": "tsc -p tsconfig.build.json --module esnext --outDir esm --declarationDir esm",
+    "build:cjs": "tsc -p tsconfig.build.json --module commonjs --outDir cjs --declarationDir cjs",
+    "start": "webpack-dev-server --mode development --progress --open",
+    "prepack": "yarn build"
+  },
+  "peerDependencies": {
+    "react": ">=16",
+    "react-dom": ">=16"
+  },
+  "files": [
+    "esm",
+    "cjs",
+    "src"
+  ],
+  "gitHead": "49c85c5c5e15767f5275a8eb924d1da9ded0db47"
+}

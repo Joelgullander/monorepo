@@ -1,0 +1,35 @@
+{
+  "name": "@hiab/typography",
+  "version": "0.0.10",
+  "description": "",
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "types": "esm/index.d.ts",
+  "author": "dynamicdog.se",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf ./esm && rimraf ./cjs",
+    "prebuild": "yarn clean",
+    "build": "yarn build:esm && yarn build:cjs",
+    "build:esm": "tsc -p tsconfig.build.json --module esnext --outDir esm --declarationDir esm",
+    "build:cjs": "tsc -p tsconfig.build.json --module commonjs --outDir cjs --declarationDir cjs",
+    "test": "mocha \"test/**/*.spec.ts?(x)\"",
+    "start": "webpack-dev-server --mode development --progress --open",
+    "prepack": "yarn build"
+  },
+  "dependencies": {
+    "@hiab/theme": "^0.1.11",
+    "html-react-parser": "^0.10.3"
+  },
+  "peerDependencies": {
+    "react": ">=16",
+    "react-dom": ">=16",
+    "styled-components": "^5.1.0"
+  },
+  "files": [
+    "esm",
+    "cjs",
+    "src"
+  ],
+  "gitHead": "49c85c5c5e15767f5275a8eb924d1da9ded0db47"
+}

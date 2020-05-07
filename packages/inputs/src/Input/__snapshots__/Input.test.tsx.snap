@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> snapshot 1`] = `
+<styled.div>
+  <styled.input
+    name="phone"
+    type="text"
+  />
+</styled.div>
+`;
